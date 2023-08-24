@@ -9,5 +9,5 @@ public class Book : BaseEntity
         
     public int Price { get; set; }
         
-    public virtual List<OrderItem>? OrderBooks { get; set; }
+    public virtual List<OrderBook>? OrderBooks { get; set; }
 }

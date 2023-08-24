@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace BookStore.DAL.Data.Mapping;
 
-public class OrderItemConfiguration: IEntityTypeConfiguration<OrderItem>
+public class OrderItemConfiguration: IEntityTypeConfiguration<OrderBook>
 {
-    public void Configure(EntityTypeBuilder<OrderItem> builder)
+    public void Configure(EntityTypeBuilder<OrderBook> builder)
     {
         builder.Property(b => b.Id)
             .HasColumnName("id")

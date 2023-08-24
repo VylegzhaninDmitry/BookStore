@@ -60,7 +60,7 @@ public sealed class OrderService : IOrderService
     /// <returns>Возвращащет созданный заказ</returns>
     public async Task<OrderDto?> CreateOrderAsync(CreateOrderDto dto)
     {
-        var orderItems = _mapper.Map<List<OrderItem>>(dto.Items);
+        var orderItems = _mapper.Map<List<OrderBook>>(dto.Items);
         var bookIds = orderItems.Select(s => s.BookId!.Value).ToList();
         var books =  _bookRepository.GetQueryable().Where(i => bookIds.Contains(i.Id));
         var order = new Order

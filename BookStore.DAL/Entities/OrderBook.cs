@@ -1,6 +1,6 @@
 namespace BookStore.DAL.Entities;
 
-public class OrderItem : BaseEntity
+public class OrderBook : BaseEntity
 {
     public int? OrderId { get; set; }
     

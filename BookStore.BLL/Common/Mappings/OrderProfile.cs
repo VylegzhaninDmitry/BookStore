@@ -10,10 +10,10 @@ public class OrderProfile : Profile
         CreateMap<Order, OrderDto>()
             .ForMember(dest => dest.TotalPrice, 
                 opt => opt.MapFrom(src => src.TotalPrice));
-        CreateMap<OrderItem, OrderItemDto>();
-        CreateMap<OrderItemDto, OrderItem>();
-        CreateMap<CreateOrderItemDto, OrderItem>();
-        CreateMap<OrderItem, CreateOrderItemDto>();
+        CreateMap<OrderBook, OrderItemDto>();
+        CreateMap<OrderItemDto, OrderBook>();
+        CreateMap<CreateOrderItemDto, OrderBook>();
+        CreateMap<OrderBook, CreateOrderItemDto>();
         CreateMap<OrderDto, CreateOrderDto>();
     }
 }

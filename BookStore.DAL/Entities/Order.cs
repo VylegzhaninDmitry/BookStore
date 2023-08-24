@@ -6,5 +6,5 @@ public class Order : BaseEntity
 
     public decimal TotalPrice { get; set; }
         
-    public virtual List<OrderItem>? OrderBooks { get; set; }
+    public virtual List<OrderBook>? OrderBooks { get; set; }
 }
